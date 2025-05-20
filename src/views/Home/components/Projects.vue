@@ -3,9 +3,9 @@ import ListProjects from '@/components/component/Projects.vue'
 </script>
 
 <template>
-    <v-container fluid>
+    <v-container fluid >
         <div class="d-flex flex-column align-start text-white ga-3">
-            <span class="text-title text-h8">MY EXPERIRENCES</span>
+            <span class="text-title text-h8 fade-in-textLeft">MY EXPERIRENCES</span>
             <span class="text-subTitle text-h4">PERSONAL PROJECTS</span>    
             <ListProjects />
         
@@ -18,7 +18,6 @@ import ListProjects from '@/components/component/Projects.vue'
     width: 100%;
     max-width: 1320px;
     margin: 5rem auto;
-
     .text-title {
         font-weight: 600;
         background-color: rgb(40, 48, 143);

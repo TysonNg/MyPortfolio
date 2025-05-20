@@ -6,7 +6,7 @@ import animationData from '@/assets/animate.json'
 </script>
 
 <template>
-    <v-container fluid>
+    <v-container  fluid>
         <v-row class="container">
             <v-col cols="6">
                 <div class="image-container position-relative">
@@ -16,7 +16,7 @@ import animationData from '@/assets/animate.json'
                     </div>
                 </div>
             </v-col>
-            <v-col cols="6" class="about-container d-flex flex-column justify-center text-white ga-5">
+            <v-col cols="6" class="about-container fade-in-text d-flex flex-column justify-center text-white ga-5">
                 <div class="text-about rounded-lg">ABOUT ME</div>
                 <div class="text-title text-h4 w-auto">
                     I AM AVAILABLE FOR <span class="text-span">WEBSITE DEVELOPE</span> PROJECTS

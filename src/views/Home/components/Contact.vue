@@ -5,13 +5,13 @@ import ContactForm from '@/components/forms/ContactForm.vue'
 <template>
     <v-container fluid class="text-white">
         <div class="d-flex flex-column align-start ga-3">
-            <span class="text-title text-h4 mb-10" style="font-weight: 600;">CONTACT ME</span>
+            <span class="text-title fade-in-textLeft text-h4 mb-10" style="font-weight: 600;">CONTACT ME</span>
             <div class="container d-flex flex-column w-100  position-relative">
                 <div class="pt-10" style="background-color: #6168ae29">
                     <v-row>
                         <v-col cols="4"></v-col>
                         <v-col cols="8">
-                            <div class="top-container d-flex flex-column ga-3">
+                            <div class="top-container fade-in-textRight d-flex flex-column ga-3">
                                 <span class="text-subTitle text-h4" style="font-weight: 600;">Let's Connect With Me</span>
                                 <span class="text-subTitle">Always available for freelancing if the right project comes
                                     along,
@@ -24,8 +24,8 @@ import ContactForm from '@/components/forms/ContactForm.vue'
                 </div>
 
 
-                <div class="d-flex pl-10 pb-10" style="background-color: #002f5a;">
-                    <div class="contact-container d-flex flex-column justify-end ga-3" style="text-align: start;">
+                <div class=" d-flex pl-10 pb-10" style="background-color: #002f5a;">
+                    <div class="contact-container fade-in-textBottom  d-flex flex-column justify-end ga-3" style="text-align: start;">
                         <div>
                             <p class="title">AN E-MAIL</p>
                             <p class="body">nhatnguyenminh1507@gmail.com</p>

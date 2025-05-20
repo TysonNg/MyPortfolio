@@ -6,6 +6,76 @@ import BaseBtn from '@/components/buttons/BaseButton.vue'
 import Writer from 't-writer.js'
 import Contact from '@/views/Home/components/Contact.vue'
 
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
+
+onMounted(() => {
+    const targetsFromBottom = document.querySelectorAll('.fade-in-textBottom');
+    const targetsFromLeft = document.querySelectorAll('.fade-in-textLeft');
+    const targetsFromRight = document.querySelectorAll('.fade-in-textRight');
+
+    const targetsFadeIn = document.querySelectorAll('.fade-in');
+    const targets = document.querySelectorAll('.fade-in-text');
+    targetsFadeIn.forEach(el => {
+        gsap.from(el, {
+            scrollTrigger: {
+                trigger: el,
+                start: 'top 80%',
+            },
+            opacity: 0,
+            y: 0,
+            duration: 2,
+        });
+    });
+    targetsFromBottom.forEach(el => {
+        gsap.from(el, {
+            scrollTrigger: {
+                trigger: el,
+                start: 'top 80%',
+            },
+            opacity: 0,
+            y: 50,
+            duration: 2,
+        });
+    });
+    targets.forEach(el => {
+        gsap.from(el, {
+            scrollTrigger: {
+                trigger: el,
+                start: 'top 80%',
+                scrub: true,
+            },
+            opacity: 0,
+            y: 100,
+            duration: 2,
+        });
+    });
+    targetsFromLeft.forEach(el => {
+        gsap.from(el, {
+            scrollTrigger: {
+                trigger: el,
+                start: 'top 80%',
+            },
+            opacity: 0,
+            x: -50,
+            duration: 2,
+        });
+    });
+    targetsFromRight.forEach(el => {
+        gsap.from(el, {
+            scrollTrigger: {
+                trigger: el,
+                start: 'top 80%',
+            },
+            opacity: 0,
+            x: 50,
+            duration: 1,
+        });
+    });
+})
+
 const target = ref(null)
 onMounted(() => {
     const writer = new Writer(target.value, {
@@ -24,10 +94,10 @@ onMounted(() => {
 </script>
 
 <template>
-    <section>
+    <section id="home">
         <v-container fluid>
             <v-row>
-                <v-col cols="6" class="left-container">
+                <v-col cols="6" class="left-container fade-in-textBottom">
                     <div id="left-item_name" class="left-item text-h7 rounded-lg">
                         NGUYEN MINH NHAT
                     </div>
@@ -35,7 +105,7 @@ onMounted(() => {
                         HEY! I&apos;M TYSON
                     </div>
                     <div id="left-item_subTitle" class="left-item text-h3">
-                        I&apos;M A <span  ref="target"></span>
+                        I&apos;M A <span ref="target"></span>
                     </div>
 
                     <div id="left-item_description" class="left-item text-h7">
@@ -50,7 +120,7 @@ onMounted(() => {
                             <v-btn color="primary" class="rounded-circle" size="40" icon>
                                 <v-icon size="20">mdi-facebook</v-icon>
                             </v-btn>
-                            <v-btn  class="rounded-circle" size="40" style="background-color: #f26798;" icon>
+                            <v-btn class="rounded-circle" size="40" style="background-color: #f26798;" icon>
                                 <v-icon size="20">mdi-instagram</v-icon>
                             </v-btn>
                             <v-btn color="primary" class="rounded-circle" size="40" icon>
@@ -69,21 +139,28 @@ onMounted(() => {
         </v-container>
     </section>
 
-    <div class="break d-flex justify-center align-center">
-        <span class="text-h4 text-white">More About Me</span>
+    <div class="break ">
+        <div class="container">
+            <span class="fade-in text-h4 text-white"><v-icon icon="mdi-nodejs"></v-icon>NodeJs</span>
+            <span class="fade-in text-h4 text-white"><v-icon icon="mdi-react"></v-icon> React</span>
+            <span class="fade-in text-h4 text-white"><v-icon icon="mdi-database"></v-icon>SQL</span>
+            <span class="fade-in text-h4 text-white"><v-icon icon="mdi-vuejs"></v-icon>Vue</span>
+            <span class="fade-in text-h4 text-white"><v-icon icon="mdi-search-web"></v-icon>ElasticSearch</span>
+        </div>
+
     </div>
 
-    <section class="position-relative">
+    <section id="about" class="position-relative ">
         <About />
     </section>
 
-    <div class="projects-section position-relative">
-        <section>
+    <div id="projects" class="projects-section position-relative">
+        <section class="py-10">
             <Projects />
         </section>
     </div>
 
-    <section>
+    <section id="contact" class="py-10">
         <Contact />
     </section>
 
@@ -141,7 +218,7 @@ section {
         text-align: start;
     }
 
-   
+
 }
 
 .break {
@@ -149,6 +226,16 @@ section {
     height: 120px;
     background-color: #03294b;
     margin: 2rem auto;
+
+    .container{
+        width: 100%;
+        height: 100%;
+        max-width: 1320px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 .projects-section {

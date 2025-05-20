@@ -1,6 +1,6 @@
 <template>
     <div>
-        <ul class="d-flex flex-row ga-3 mt-10">
+        <ul class="fade-in d-flex flex-row ga-3 mt-10">
             <li :width="392" :height="367" v-for="(project, index) in projects" :key="index"
                 class="project-item d-flex flex-column ga-3 rounded-lg shadow-2">
                 <img :src="project.image" alt="Project Image" :width="364" :height="350"
