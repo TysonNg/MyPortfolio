@@ -10,7 +10,6 @@ import { Vue3Lottie } from 'vue3-lottie'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 
-import animationData from '@/assets/animate2.json'
 import animationData2 from '@/assets/phaohoa.json'
 
 gsap.registerPlugin(ScrollTrigger)
