@@ -30,9 +30,9 @@
     "descriptionTitle": "MiniSocial Website",
     "descriptions": " A social media website inspired by Facebook and Instagram with features like creating posts, nested comments, 24-hour stories, messaging, and notifications.",
     "slug": "minisocial-website",
-    "thumb": "/src/public/images/MiniSocial/HomePage.png",
+    "thumb": "/src/public/images/MiniSocial/homepage.png",
     "imgs":[
-      "/src/public/images/MiniSocial/HomePage.png",
+      "/src/public/images/MiniSocial/homepage.png",
       "/src/public/images/MiniSocial/Login.png",
       "/src/public/images/MiniSocial/SignUp.png",
       "/src/public/images/MiniSocial/Settings.png",
