@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import ListProjects from '@/components/component/Projects.vue'
+
+
 </script>
 
 <template>

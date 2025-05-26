@@ -21,10 +21,12 @@ onUnmounted(() => {
     <v-container fluid :class="{ scrolled: isScrolled }">
         <header class="header">
             <v-row class="align-center">
-
                 <v-col cols="5" style="width: fit-content;"
-                    class="grid-header d-flex justify-start align-start text-h3 text-white">
-                    <router-link to="/" style="color: white;cursor: pointer;">
+                    class=" text-h3 text-white">
+                    <router-link class="d-flex align-center ga-2" to="/" style="color: white;cursor: pointer;" >
+                        <v-avatar size="40">
+                            <img style="object-fit: cover;" src="@/assets/icon.png" alt="alt">
+                        </v-avatar>
                         TYSON
                     </router-link>
                 </v-col>

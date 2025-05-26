@@ -2,6 +2,7 @@
 import Header from '@/components/header/Header.vue'
 import Footer from '@/components/footer/Footer.vue'
 import Lenis from '@/lib/lenis/Lenis.vue'
+import { Suspense } from 'vue';
 </script>
 
 <template>
@@ -10,7 +11,14 @@ import Lenis from '@/lib/lenis/Lenis.vue'
       <div class="layout">
         <Header />
         <main class="main">
-          <router-view />
+          <Suspense>
+            <template #default>
+              <router-view />
+            </template>
+            <template #fallback>
+              <div class="loading">Loading...</div>
+            </template>
+          </Suspense>
         </main>
         <Footer />
       </div>
@@ -25,12 +33,13 @@ import Lenis from '@/lib/lenis/Lenis.vue'
   .v-application {
     background-color: #051932;
 
-    .layout{
+    .layout {
       display: flex;
       flex-direction: column;
       min-height: 100vh;
     }
-    .main{
+
+    .main {
       flex: 1;
     }
   }

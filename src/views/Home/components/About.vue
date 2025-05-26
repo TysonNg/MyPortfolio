@@ -1,5 +1,4 @@
 <script setup>
-import { ref } from 'vue'
 import BaseBtn from '@/components/buttons/BaseButton.vue'
 import { Vue3Lottie } from 'vue3-lottie'
 import animationData from '@/assets/animate.json'
@@ -23,31 +22,31 @@ import animationData from '@/assets/animate.json'
                 </div>
 
                 <div class="text-description">
-                    The standard chunk of Lorem Ipsum used since the 1500s is reproduced
-                    below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by
-                    Cicero are also reproduced in their exact original form, accompanied by English versions from the
-                    1914 translation by H. Rackham.
+                    I am a web developer with a passion for creating dynamic and responsive websites. I have experience
+                    in HTML, CSS, JavaScript, and various frameworks. I am graduated from the University of Information Technology, Vietnam National University HCM. I am always eager to learn new technologies, stay updated with industry trends, and continuously improve my craft. My goal is to create impactful digital experiences and contribute to meaningful products.
+                    <span class="d-flex ga-2 mt-1">
+                        <strong>My Github:</strong>
+                        <a href="https://github.com/TysonNg">https://github.com/TysonNg</a>
+                    </span>
                 </div>
-
-
 
                 <div class="box-container d-flex ga-5">
                     <div class="box-item">
-                        <span class="num">280+</span>
-                        <span>Google Review</span>
+                        <span class="num">3+</span>
+                        <span>Projects</span>
                     </div>
                     <div class="box-item">
                         <span class="num">1+</span>
                         <span>Years Experience</span>
                     </div>
                     <div class="box-item">
-                        <span class="num">49+</span>
-                        <span>Awward Winning</span>
+                        <span class="num">3.0</span>
+                        <span>GPA</span>
                     </div>
                 </div>
 
                 <div class="mt-10">
-                    <BaseBtn />
+                    <BaseBtn content="Get in touch" size="large" url="#"/>
                 </div>
             </v-col>
         </v-row>

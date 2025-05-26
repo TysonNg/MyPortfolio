@@ -41,10 +41,10 @@ import ContactForm from '@/components/forms/ContactForm.vue'
                             <v-btn style="background-color: #f26798;" class="rounded-circle" size="40" icon>
                                 <v-icon size="20">mdi-instagram</v-icon>
                             </v-btn>
-                            <v-btn color="primary" class="rounded-circle" size="40" icon>
+                            <v-btn color="primary" href="https://www.linkedin.com/in/tysonng" target="_blank" tag="a" class="rounded-circle" size="40" icon>
                                 <v-icon size="20">mdi-linkedin</v-icon>
                             </v-btn>
-                            <v-btn class="rounded-circle" size="40" style="background-color: #f26798;" icon>
+                            <v-btn class="rounded-circle" href="https://github.com/TysonNg" target="_blank" tag="a" size="40" style="background-color: #f26798;" icon>
                                 <v-icon size="20">mdi-github</v-icon>
                             </v-btn>
                         </div>
@@ -52,8 +52,8 @@ import ContactForm from '@/components/forms/ContactForm.vue'
                     <ContactForm />
                 </div>
 
-                <div class="position-absolute" style="top:3rem; left: 3rem;">
-                    <img src="@/assets/avatar.jpg" class="rounded-xl" :height="400" alt="avatar">
+                <div class="position-absolute" style="top:4rem; left: 1rem;">
+                    <img src="@/assets/avatar4.jpg" class="rounded-xl" :height="400" alt="avatar">
                 </div>
             </div>
         </div>
