@@ -1,8 +1,19 @@
+<script setup lang="ts">
+defineProps <
+{
+    content: string;
+    size: string;
+    url: string;
+} > ()
+</script>
+
 <template>
-    <v-btn class="base-btn">
-        <p>GET IN TOUCH</p>
-        <v-icon class="ml-1">mdi-arrow-right</v-icon>
-    </v-btn>
+    <router-link :to="url">
+        <v-btn class="base-btn " :size="size">
+            <p>{{content}}</p>
+            <v-icon class="ml-1">mdi-arrow-right</v-icon>
+        </v-btn>
+    </router-link>
 </template>
 
 <style lang="scss" scoped>

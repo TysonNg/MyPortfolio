@@ -5,9 +5,13 @@ import Projects from '@/views/Home/components/Projects.vue'
 import BaseBtn from '@/components/buttons/BaseButton.vue'
 import Writer from 't-writer.js'
 import Contact from '@/views/Home/components/Contact.vue'
+import { Vue3Lottie } from 'vue3-lottie'
 
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
+
+import animationData from '@/assets/animate2.json'
+import animationData2 from '@/assets/phaohoa.json'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -115,7 +119,7 @@ onMounted(() => {
                     </div>
 
                     <div class="d-flex ga-5">
-                        <BaseBtn />
+                        <BaseBtn content="Get in touch" size="large" url="#" />
                         <div class="d-flex ga-2">
                             <v-btn color="primary" class="rounded-circle" size="40" icon>
                                 <v-icon size="20">mdi-facebook</v-icon>
@@ -123,23 +127,32 @@ onMounted(() => {
                             <v-btn class="rounded-circle" size="40" style="background-color: #f26798;" icon>
                                 <v-icon size="20">mdi-instagram</v-icon>
                             </v-btn>
-                            <v-btn color="primary" class="rounded-circle" size="40" icon>
+                            <v-btn color="primary" class="rounded-circle" href="https://www.linkedin.com/in/tysonng"
+                                target="_blank" tag="a" size="40" icon>
                                 <v-icon size="20">mdi-linkedin</v-icon>
                             </v-btn>
-                            <v-btn class="rounded-circle" size="40" style="background-color: #f26798;" icon>
+                            <v-btn class="rounded-circle" href="https://github.com/TysonNg" target="_blank" tag="a"
+                                size="40" style="background-color: #f26798;" icon>
                                 <v-icon size="20">mdi-github</v-icon>
                             </v-btn>
                         </div>
                     </div>
                 </v-col>
-                <v-col cols="6">
-                    <img src="@/assets/avatar.jpg" alt="avatar">
+                <v-col cols="6" class="position-relative">
+                    <div id="animate1">
+                        <Vue3Lottie :animation-data="animationData2" :height="300" :width="300" />
+                    </div>
+                    <div id="animate2">
+                        <Vue3Lottie :animation-data="animationData2" :height="300" :width="300" />
+                    </div>
+                    <img src="@/assets/avatar.png" alt="avatar" style="position: relative;z-index: 0;">
+                
                 </v-col>
             </v-row>
         </v-container>
     </section>
 
-    <div class="break ">
+    <div class="break">
         <div class="container">
             <span class="fade-in text-h4 text-white"><v-icon icon="mdi-nodejs"></v-icon>NodeJs</span>
             <span class="fade-in text-h4 text-white"><v-icon icon="mdi-react"></v-icon> React</span>
@@ -160,9 +173,11 @@ onMounted(() => {
         </section>
     </div>
 
+
     <section id="contact" class="py-10">
         <Contact />
     </section>
+
 
 </template>
 
@@ -172,6 +187,21 @@ section {
     max-width: 1320px;
     margin: 0 auto;
 }
+
+#animate2 {
+    position: absolute;
+    top: 5rem;
+    right: -2rem;
+    z-index: 0;
+}
+
+#animate1 {
+    position: absolute;
+    top: 13rem;
+    left: -2rem;
+    z-index: 0;
+}
+
 
 .left-container {
     display: flex;
@@ -227,7 +257,7 @@ section {
     background-color: #03294b;
     margin: 2rem auto;
 
-    .container{
+    .container {
         width: 100%;
         height: 100%;
         max-width: 1320px;

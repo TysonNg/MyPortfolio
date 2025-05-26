@@ -1,0 +1,73 @@
+{
+  "ecommerce-website": {
+    "title": "Ecommerce Website",
+    "descriptionTitle": "Ecommerce Website",
+    "descriptions": "Built many features e-commerce website with product browsing, user authentication, shopping cart, order placement,.... ",
+    "descriptions_detail": "",
+    "slug": "ecommerce-website",
+    "thumb": "/src/assets/Ecommerce/ListProduct.png",
+    "imgs":[
+        "/src/assets/Ecommerce/Home1.png",
+        "/src/assets/Ecommerce/Home2.png",
+        "/src/assets/Ecommerce/ListProduct.png",
+        "/src/assets/Ecommerce/MyOrder.png",
+        "/src/assets/Ecommerce/ProductDetail.png",
+        "/src/assets/Ecommerce/CreateProduct.png",
+        "/src/assets/Ecommerce/Draft.png",
+        "/src/assets/Ecommerce/Published.png"
+    ],
+    "reponsibilities":["Built RESTful APIs with Node.js and Express for product management, cart functionality, orders, and user accounts",
+  "Implemented JWT to authentication users.","Utilized MongoDB to store user data, products, and order information with schema flexibility."],
+    "details": {
+      "type": "Ecommerce",
+      "frameWork": "Next.js, Node.js, MongoDB, Redis, Elasticsearch",
+      "language": "JavaScript",
+      "liveUrl": "https://newshop-tyson.vercel.app"
+    }
+  },
+  "minisocial-website": {
+    "title": "MiniSocial Website",
+    "descriptionTitle": "MiniSocial Website",
+    "descriptions": " A social media website inspired by Facebook and Instagram with features like creating posts, nested comments, 24-hour stories, messaging, and notifications.",
+    "slug": "minisocial-website",
+    "thumb": "/src/assets/MiniSocial/HomePage.png",
+    "imgs":[
+      "/src/assets/MiniSocial/HomePage.png",
+      "/src/assets/MiniSocial/Login.png",
+      "/src/assets/MiniSocial/SignUp.png",
+      "/src/assets/MiniSocial/Settings.png",
+      "/src/assets/MiniSocial/User.png",
+      "/src/assets/MiniSocial/PostModal.png"
+    ],
+    "reponsibilities":["Implemented features such as creating posts with images, nested comment system,and auto-expiring stories (24h).","Integrated real-time chat and notification systems using Socket.IO for user interaction, status of user when them online.",
+  "Applied Elasticsearch to enable full-text search across users with keyword suggestions.","Took full ownership of the development process as a solo fullstack developer, from design to deployment"],
+    "details": {
+      "type": "Social Media",
+      "frameWork": "Next.js, Nest.js, PostgreSQL, Docker, Redis, Elasticsearch",
+      "language": "TypeScript",
+      "liveUrl": "https://mini-social-fe.vercel.app/home"
+    }
+  },
+  "baovethanhdat-website":{
+     "title": "Security Services Website",
+    "descriptionTitle": " Website for security services",
+    "descriptions": " A security company website build and seo via WordPress with features like service introduction, contact form, and blog.",
+    "slug": "baovethanhdat-website",
+    "thumb": "/src/assets/Security/Home2.png",
+    "imgs":[
+      "/src/assets/Security/Home1.png",
+      "/src/assets/Security/Home2.png",
+      "/src/assets/Security/Introduce.png",
+      "/src/assets/Security/Services.png",
+      "/src/assets/Security/Training.png"
+    ],
+    "reponsibilities":["SEO top search results for security services in Vietnam.","Designed and developed the website using WordPress with Elementor and Astra theme.",
+  "Implemented a contact form for user inquiries and integrated Google Maps for location services."],
+    "details": {
+      "type": "Security Services",
+      "frameWork": "WordPress, Elementor, Astra",
+      "language": "PHP, JavaScript",
+      "liveUrl": "https://baovethanhdat.com"
+    }
+  }
+}
