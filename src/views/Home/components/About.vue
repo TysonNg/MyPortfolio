@@ -9,7 +9,7 @@ import animationData from '@/assets/animate.json'
         <v-row class="container">
             <v-col cols="6">
                 <div class="image-container position-relative">
-                    <img id="image" class="w-100 h-auto rounded-lg" src="@/assets/avatar3.jpg" alt="avatar">
+                    <img id="image" class="w-100 h-auto rounded-lg" src="@/assets/avatar5.jpg" alt="avatar">
                     <div id="animate_1">
                         <Vue3Lottie :animation-data="animationData" :height="300" :width="300" />
                     </div>
