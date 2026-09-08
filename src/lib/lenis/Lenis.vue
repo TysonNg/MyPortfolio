@@ -37,6 +37,10 @@ onMounted(() => {
             easing: (t) => 1 - Math.pow(1 - t, 3),
           })
         }
+      } else {
+        await nextTick()
+        lenis.scrollTo(0, { immediate: true })
+        window.scrollTo(0, 0)
       }
     })
   }

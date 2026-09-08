@@ -20,8 +20,6 @@ import BaseBtn from '@/components/buttons/BaseButton.vue'
 
             <!-- Right Content -->
             <v-col cols="12" md="7" class="about-container d-flex flex-column justify-center ga-4 ga-md-5">
-                <div class="section-tag font-mono">01 // ABOUT ME</div>
-
                 <h2 class="text-title">
                     Building Robust Web Systems With Precision &amp; Craft.
                 </h2>
@@ -136,18 +134,6 @@ import BaseBtn from '@/components/buttons/BaseButton.vue'
 
     .about-container {
         text-align: start;
-
-        .section-tag {
-            width: fit-content;
-            background-color: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--color-border-default);
-            padding: 4px 12px;
-            letter-spacing: 0.12rem;
-            font-size: 0.75rem;
-            font-weight: 500;
-            color: var(--color-fg-muted);
-            border-radius: 4px;
-        }
 
         .text-title {
             font-weight: 700;

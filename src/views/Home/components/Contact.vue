@@ -19,10 +19,8 @@ const copyToClipboard = async (text: string, field: string) => {
 
 <template>
     <v-container fluid class="contact-section px-4 px-md-12">
-        <div class="d-flex flex-column align-start ga-4">
-            <span class="section-tag font-mono">04 // GET IN TOUCH</span>
-            
-            <div class="contact-card w-100 rounded-sm overflow-hidden mt-4">
+        <div class="d-flex flex-column align-start">
+            <div class="contact-card w-100 rounded-sm overflow-hidden">
                 <!-- Header Banner -->
                 <div class="card-header pa-6 pa-md-8">
                     <h2 class="sub-title">Let's Connect &amp; Collaborate</h2>
@@ -141,17 +139,6 @@ const copyToClipboard = async (text: string, field: string) => {
 .contact-section {
     max-width: 1320px;
     margin: 2rem auto;
-
-    .section-tag {
-        background-color: rgba(255, 255, 255, 0.05);
-        border: 1px solid var(--color-border-default);
-        padding: 4px 12px;
-        letter-spacing: 0.12rem;
-        font-size: 0.75rem;
-        font-weight: 500;
-        color: var(--color-fg-muted);
-        border-radius: 4px;
-    }
 }
 
 .contact-card {

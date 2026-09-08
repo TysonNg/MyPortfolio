@@ -20,7 +20,6 @@ const experiences: ExperienceItem[] = experienceData
     <div class="container">
       <!-- Section Header -->
       <div class="header-box d-flex flex-column align-start ga-3 mb-10 mb-md-14 fade-in-textBottom">
-        <span class="section-tag font-mono">02 // WORK EXPERIENCE</span>
         <h2 class="section-title">CAREER JOURNEY</h2>
         <p class="section-subtitle">
           My professional track record, engineering roles, and technical contributions.
@@ -109,17 +108,6 @@ const experiences: ExperienceItem[] = experienceData
 .container {
   margin: 1rem auto;
   max-width: 1320px;
-}
-
-.section-tag {
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--color-border-default);
-  padding: 4px 12px;
-  letter-spacing: 0.12rem;
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: var(--color-fg-muted);
-  border-radius: 4px;
 }
 
 .section-title {

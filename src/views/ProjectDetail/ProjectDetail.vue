@@ -1,9 +1,27 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router';
 import projectJson from '@/data/data.json';
-import { computed } from 'vue';
+import { computed, ref, onMounted, watch, inject } from 'vue';
 import Carousel from '@/components/component/carousel/Carousel.vue';
+import ImageLightbox from '@/components/modals/ImageLightbox.vue';
+
 const route = useRoute();
+const lenis = inject<any>('lenis', null);
+
+const scrollToTop = () => {
+    window.scrollTo(0, 0);
+    if (lenis) {
+        lenis.scrollTo(0, { immediate: true });
+    }
+};
+
+onMounted(() => {
+    scrollToTop();
+});
+
+watch(() => route.params.slug, () => {
+    scrollToTop();
+});
 const stringMap = new Map<string, string>([
     [`ecommerce-website`, `During my learning journey, I developed an e-commerce website project to simulate a modern online shopping experience. The website was built using ReactJS for the frontend and NestJS for the backend, with PostgreSQL as the database and Redis for caching to enhance performance.`],
     [`minisocial-website`,`A social media website inspired by Facebook and Instagram with features like
@@ -33,6 +51,27 @@ const projectDetails = computed(() => {
     return null
 })
 
+// Lightbox state
+const isLightboxOpen = ref(false);
+const lightboxImages = ref<string[]>([]);
+const lightboxInitialIndex = ref(0);
+
+const openScreenshotsLightbox = (index: number) => {
+    if (projectDetails.value?.imgs && projectDetails.value.imgs.length > 0) {
+        lightboxImages.value = projectDetails.value.imgs;
+        lightboxInitialIndex.value = index;
+        isLightboxOpen.value = true;
+    }
+};
+
+const openThumbLightbox = () => {
+    if (projectDetails.value?.thumb) {
+        lightboxImages.value = [projectDetails.value.thumb];
+        lightboxInitialIndex.value = 0;
+        isLightboxOpen.value = true;
+    }
+};
+
 </script>
 
 <template>
@@ -51,8 +90,12 @@ const projectDetails = computed(() => {
         <div class="project-content">
             <!-- Hero Card: Image + Tech Details -->
             <div class="overview-container rounded-sm pa-6 pa-md-8">
-                <div class="overview-image-box">
+                <div class="overview-image-box zoomable" @click="openThumbLightbox" title="Click to enlarge">
                     <img :src="projectDetails.thumb" :alt="projectDetails.title" class="project-main-img rounded-sm" />
+                    <div class="thumb-zoom-badge">
+                        <v-icon size="15" class="mr-1">mdi-arrow-expand</v-icon>
+                        <span>Click to expand</span>
+                    </div>
                 </div>
                 <div class="info-container">
                     <h2 class="subtitle">{{ projectDetails.descriptionTitle }}</h2>
@@ -77,7 +120,7 @@ const projectDetails = computed(() => {
 
             <!-- Deep Dive Details -->
             <div class="details-section mt-10 rounded-sm pa-6 pa-md-8">
-                <h2 class="section-title mb-6 font-mono">01 // PROJECT BREAKDOWN</h2>
+                <h2 class="section-title mb-6 font-mono">PROJECT BREAKDOWN</h2>
                 <div class="d-flex flex-column ga-8">
                     <div class="detail-block">
                         <h3 class="block-title">1. Project Overview</h3>
@@ -98,11 +141,18 @@ const projectDetails = computed(() => {
 
                     <div class="detail-block" v-if="projectDetails.imgs && projectDetails.imgs.length">
                         <h3 class="block-title mb-4">3. Project Screenshots</h3>
-                        <Carousel :items="projectDetails.imgs" />
+                        <Carousel :items="projectDetails.imgs" @image-click="openScreenshotsLightbox" />
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Lightbox Modal -->
+        <ImageLightbox
+            v-model="isLightboxOpen"
+            :images="lightboxImages"
+            :initial-index="lightboxInitialIndex"
+        />
     </div>
     <div v-else class="not-found text-center py-16">
         <h2>Project not found!</h2>
@@ -168,6 +218,48 @@ const projectDetails = computed(() => {
     .overview-image-box {
         width: 100%;
         max-width: 580px;
+        position: relative;
+
+        &.zoomable {
+            cursor: zoom-in;
+
+            .project-main-img {
+                transition: all 0.25s ease;
+            }
+
+            &:hover {
+                .project-main-img {
+                    filter: brightness(1.06);
+                    border-color: rgba(255, 255, 255, 0.25);
+                }
+
+                .thumb-zoom-badge {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+
+        .thumb-zoom-badge {
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            display: inline-flex;
+            align-items: center;
+            background: rgba(15, 23, 42, 0.85);
+            color: #f1f5f9;
+            font-size: 0.8rem;
+            font-weight: 500;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            transform: translateY(6px);
+            transition: all 0.25s ease;
+            pointer-events: none;
+        }
 
         .project-main-img {
             width: 100%;
@@ -177,6 +269,7 @@ const projectDetails = computed(() => {
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 4px;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+            display: block;
         }
     }
 
