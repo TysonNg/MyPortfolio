@@ -2,7 +2,7 @@
   "ecommerce-website": {
     "title": "Ecommerce Website",
     "descriptionTitle": "Ecommerce Website",
-    "descriptions": "Built many features e-commerce website with product browsing, user authentication, shopping cart, order placement,.... ",
+    "descriptions": "Built a feature-rich e-commerce website with product browsing, user authentication, shopping cart, order placement, and seamless checkout.",
     "descriptions_detail": "",
     "slug": "ecommerce-website",
     "thumb": "https://res.cloudinary.com/dkrhxryix/image/upload/v1748280432/Ecommerce/x8cr6xoptdmqgxo7dxp4.png",
@@ -19,8 +19,11 @@
         "https://res.cloudinary.com/dkrhxryix/image/upload/v1748280429/Ecommerce/i1pfoshbccnsaxoqssbm.png",
         "https://res.cloudinary.com/dkrhxryix/image/upload/v1748280429/Ecommerce/qx69pzodv1nj4nkbummb.png"
     ],
-    "reponsibilities":["Built RESTful APIs with Node.js and Express for product management, cart functionality, orders, and user accounts",
-  "Implemented JWT to authentication users.","Utilized MongoDB to store user data, products, and order information with schema flexibility."],
+    "responsibilities": [
+      "Built RESTful APIs with Node.js and Express for product management, cart functionality, orders, and user accounts.",
+      "Implemented JWT for secure user authentication and authorization.",
+      "Utilized MongoDB to store user data, products, and order information with high schema flexibility."
+    ],
     "details": {
       "type": "Ecommerce",
       "frameWork": "Next.js, Node.js, MongoDB, Redis, Elasticsearch",
@@ -31,7 +34,7 @@
   "minisocial-website": {
     "title": "MiniSocial Website",
     "descriptionTitle": "MiniSocial Website",
-    "descriptions": " A social media website inspired by Facebook and Instagram with features like creating posts, nested comments, 24-hour stories, messaging, and notifications.",
+    "descriptions": "A modern social media website inspired by Facebook and Instagram featuring post creation, nested comments, 24-hour stories, real-time messaging, and notifications.",
     "slug": "minisocial-website",
     "thumb": "https://res.cloudinary.com/dkrhxryix/image/upload/v1748280340/MiniSocial/ygsy5r8ulq171olgxbfl.png",
     "imgs":[
@@ -42,8 +45,12 @@
       "https://res.cloudinary.com/dkrhxryix/image/upload/v1748280340/MiniSocial/ygsy5r8ulq171olgxbfl.png",
       "https://res.cloudinary.com/dkrhxryix/image/upload/v1748280339/MiniSocial/vqquhpzg1n7ipglkdfot.png"
     ],
-    "reponsibilities":["Implemented features such as creating posts with images, nested comment system,and auto-expiring stories (24h).","Integrated real-time chat and notification systems using Socket.IO for user interaction, status of user when them online.",
-  "Applied Elasticsearch to enable full-text search across users with keyword suggestions.","Took full ownership of the development process as a solo fullstack developer, from design to deployment"],
+    "responsibilities": [
+      "Implemented rich features such as post creation with images, nested comment system, and auto-expiring 24h stories.",
+      "Integrated real-time chat and notifications using Socket.IO, including user online/offline status indicator.",
+      "Applied Elasticsearch to enable full-text search across users with keyword autocomplete suggestions.",
+      "Took full ownership of the development lifecycle as a solo fullstack developer, from design to deployment."
+    ],
     "details": {
       "type": "Social Media",
       "frameWork": "Next.js, Nest.js, PostgreSQL, Docker, Redis, Elasticsearch",
@@ -52,9 +59,9 @@
     }
   },
   "baovethanhdat-website":{
-     "title": "Security Services Website",
-    "descriptionTitle": " Website for security services",
-    "descriptions": " A security company website build and seo via WordPress with features like service introduction, contact form, and blog.",
+    "title": "Security Services Website",
+    "descriptionTitle": "Website for Security Services",
+    "descriptions": "A security company website built and SEO-optimized via WordPress with features like service introduction, contact inquiry form, and company blog.",
     "slug": "baovethanhdat-website",
     "thumb": "https://res.cloudinary.com/dkrhxryix/image/upload/v1748280551/Security/ugvcmcbfo4m7vcpwnld6.png",
     "imgs":[
@@ -64,8 +71,11 @@
       "https://res.cloudinary.com/dkrhxryix/image/upload/v1748280550/Security/qyp6j18jtuw1mqkyzqym.png",
       "https://res.cloudinary.com/dkrhxryix/image/upload/v1748280550/Security/qyp6j18jtuw1mqkyzqym.png"
     ],
-    "reponsibilities":["SEO top search results for security services in Vietnam.","Designed and developed the website using WordPress with Elementor and Astra theme.",
-  "Implemented a contact form for user inquiries and integrated Google Maps for location services."],
+    "responsibilities": [
+      "Achieved top SEO search rankings for security services in Vietnam.",
+      "Designed and developed the website using WordPress with Elementor and Astra theme.",
+      "Implemented contact forms for user inquiries and integrated Google Maps for location services."
+    ],
     "details": {
       "type": "Security Services",
       "frameWork": "WordPress, Elementor, Astra",

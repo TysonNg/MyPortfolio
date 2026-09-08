@@ -31,7 +31,7 @@ import { Suspense } from 'vue';
 <style lang="scss">
 #app {
   .v-application {
-    background-color: #051932;
+    background-color: var(--color-canvas-default) !important;
 
     .layout {
       display: flex;
@@ -41,6 +41,7 @@ import { Suspense } from 'vue';
 
     .main {
       flex: 1;
+      padding-top: 75px;
     }
   }
 

@@ -8,8 +8,9 @@ const lenis = new Lenis({
   duration: 1.2,
   easing: (t) => 1 - Math.pow(1 - t, 3),
   smooth: true,
-  smoothTouch: true,
 })
+
+const router = useRouter()
 
 provide('lenis', lenis)
 
@@ -20,25 +21,25 @@ function raf(time) {
 
 onMounted(() => {
   requestAnimationFrame(raf)
-  const router = useRouter()
-  router.afterEach(async (to) => {
-    if (to.hash) {
-      await nextTick()
-      const el = document.querySelector(to.hash)
-      if (el) {
-        const elementRect = el.getBoundingClientRect()
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop
-        const elementTop = elementRect.top + scrollTop
+  if (router) {
+    router.afterEach(async (to) => {
+      if (to.hash) {
+        await nextTick()
+        const el = document.querySelector(to.hash)
+        if (el) {
+          const elementRect = el.getBoundingClientRect()
+          const scrollTop = window.pageYOffset || document.documentElement.scrollTop
+          const elementTop = elementRect.top + scrollTop
+          const offset = 80 // offset for fixed header
 
-        const offset = window.innerHeight / 2 - elementRect.height / 2
-
-        lenis.scrollTo(elementTop - offset, {
-          duration: 1.2,
-          easing: (t) => 1 - Math.pow(1 - t, 3),
-        })
+          lenis.scrollTo(elementTop - offset, {
+            duration: 1.2,
+            easing: (t) => 1 - Math.pow(1 - t, 3),
+          })
+        }
       }
-    }
-  })
+    })
+  }
 })
 
 onBeforeUnmount(() => {

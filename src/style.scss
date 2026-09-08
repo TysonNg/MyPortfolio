@@ -1,11 +1,41 @@
 :root {
-  font-family: 'Poppins', 'Playfair Display', serif, sans-serif;
-  line-height: 1.5;
+  /* Surface Layers (Deep Monochrome) */
+  --color-canvas-default: #08090c;
+  --color-canvas-subtle:  #0e1017;
+  --color-surface-card:   #12151e;
+  --color-surface-hover:  #171b26;
+  --color-surface-glass:  rgba(8, 9, 12, 0.85);
+
+  /* Borders & Hairlines */
+  --color-border-subtle:  rgba(255, 255, 255, 0.08);
+  --color-border-default: rgba(255, 255, 255, 0.12);
+  --color-border-hover:   rgba(255, 255, 255, 0.25);
+  --color-border-strong:  rgba(255, 255, 255, 0.4);
+
+  /* Typography Colors */
+  --color-fg-default:     #f4f5f8;
+  --color-fg-muted:       #94a3b8;
+  --color-fg-subtle:      #626d7a;
+  --color-fg-inverse:     #08090c;
+
+  /* Interactive & Accent */
+  --color-btn-primary-bg: #ffffff;
+  --color-btn-primary-fg: #08090c;
+  --color-btn-primary-hover: #e2e8f0;
+
+  --color-status-live:    #22c55e;
+
+  /* Fonts */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  font-family: var(--font-sans);
+  line-height: 1.6;
   font-weight: 400;
   font-size: 16px;
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #051932;
+  color-scheme: dark;
+  color: var(--color-fg-default);
+  background-color: var(--color-canvas-default);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,73 +43,86 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-a:hover {
-  color: #535bf2;
+::selection {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  scroll-behavior: smooth;
+  background-color: var(--color-canvas-default);
+  color: var(--color-fg-default);
+  overflow-x: hidden;
+  font-family: var(--font-sans);
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+body,
+button,
+input,
+textarea,
+select,
+.v-application,
+.v-btn,
+h1, h2, h3, h4, h5, h6,
+p, span, a, div {
+  font-family: var(--font-sans);
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+.font-mono,
+code,
+pre,
+.tech-badge,
+.mono-text {
+  font-family: var(--font-mono) !important;
+}
+
+a {
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+  color: var(--color-fg-default);
+  text-decoration: none;
+  transition: opacity 0.2s ease, color 0.2s ease;
 }
 
-button:hover {
-  border-color: #646cff;
+a:hover {
+  opacity: 0.8;
 }
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-.card {
-  padding: 2em;
-}
-
 
 #app {
   width: 100%;
-  margin: 0 auto;
-  text-align: center;
+  min-height: 100vh;
+  margin: 0;
+  text-align: left;
+  background-color: var(--color-canvas-default);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
+/* Custom Clean Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
 
-  a:hover {
-    color: #747bff;
-  }
+::-webkit-scrollbar-track {
+  background: var(--color-canvas-default);
+}
 
-  button {
-    background-color: #f9f9f9;
-  }
+::-webkit-scrollbar-thumb {
+  background: #232733;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #323849;
 }
