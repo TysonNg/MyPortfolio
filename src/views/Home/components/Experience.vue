@@ -6,6 +6,7 @@ interface ExperienceItem {
   period: string
   role: string
   company: string
+  project?: string
   location?: string
   type?: string
   responsibilities: string[]
@@ -63,6 +64,8 @@ const experiences: ExperienceItem[] = experienceData
 
                 <div class="company-meta d-flex flex-wrap align-center ga-2 mt-1 mb-3">
                   <span class="company-name font-mono">{{ exp.company }}</span>
+                  <span v-if="exp.project" class="location-dot">·</span>
+                  <span v-if="exp.project" class="company-project font-mono">{{ exp.project }}</span>
                   <span v-if="exp.location" class="location-dot">·</span>
                   <span v-if="exp.location" class="company-location font-mono text-caption">{{ exp.location }}</span>
                 </div>
@@ -311,6 +314,12 @@ const experiences: ExperienceItem[] = experienceData
       color: #60a5fa;
       font-weight: 600;
       font-size: 0.95rem;
+    }
+
+    .company-project {
+      color: #93c5fd;
+      font-size: 0.9rem;
+      font-weight: 500;
     }
 
     .location-dot {

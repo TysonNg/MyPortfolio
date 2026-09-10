@@ -1,46 +1,27 @@
 [
   {
     "id": "exp-1",
-    "period": "2024 — Present",
-    "role": "Full-Stack Engineer",
-    "company": "Freelance & Independent Projects",
-    "location": "Ho Chi Minh City, Vietnam",
-    "type": "Contract / Freelance",
-    "responsibilities": [
-      "Architected and delivered end-to-end web applications with Vue 3, TypeScript, Next.js, and Node.js backend services.",
-      "Engineered high-performance UI systems with sub-second page loads, responsive layouts, and modern interactive animations (GSAP & Lenis).",
-      "Designed and integrated RESTful APIs, secure authentication systems (JWT, OAuth), and real-time communication via WebSockets.",
-      "Optimized database queries in PostgreSQL and MongoDB, implementing Redis caching and Elasticsearch for instantaneous search."
-    ],
-    "technologies": ["Vue 3", "TypeScript", "Next.js", "Node.js", "PostgreSQL", "Redis", "Docker"]
-  },
-  {
-    "id": "exp-2",
-    "period": "2023 — 2024",
-    "role": "Full-Stack Developer",
-    "company": "Digital Solutions Lab",
+    "period": "Jul 2024 — Present",
+    "role": "Full-stack Developer",
+    "company": "Vietnam Nextech",
+    "project": "Tourism Management System",
     "location": "Ho Chi Minh City, Vietnam",
     "type": "Full-time",
     "responsibilities": [
-      "Developed web applications, interactive dashboards, and backend integration services using Vue 3, TypeScript, and Node.js.",
-      "Engineered RESTful APIs and database queries with PostgreSQL and MongoDB to support core client functionalities.",
-      "Refactored legacy codebases to modern TypeScript standards, boosting test coverage and optimizing application performance by 35%.",
-      "Integrated third-party payment gateways, Cloudinary asset pipelines, and automated CI/CD deployment routines."
+      "Built modules for Human Resources, Tour Product Templates, Suppliers, Tour Sales/Operations and System Administration.",
+      "Designed and implemented responsive user interfaces, reusable components, and user-friendly workflows.",
+      "Developed end-to-end workflows for tour creation, product configuration, supplier management, approvals and operations.",
+      "Collaborated on debugging, performance optimization, feature development, and production deployment."
     ],
-    "technologies": ["Vue 3", "TypeScript", "Node.js", "PostgreSQL", "RESTful API", "Docker", "Git"]
-  },
-  {
-    "id": "exp-3",
-    "period": "2022 — 2023",
-    "role": "Web Developer Intern",
-    "company": "Tech Innovation Center (UIT)",
-    "location": "Ho Chi Minh City, Vietnam",
-    "type": "Internship",
-    "responsibilities": [
-      "Built internal tooling and university student management portals using modern JavaScript, HTML5, and CSS/SCSS.",
-      "Assisted in constructing scalable relational database schemas with MySQL and PostgreSQL for academic projects.",
-      "Participated in sprint planning, code reviews, and Agile/Scrum team ceremonies to ensure quality deliverables."
-    ],
-    "technologies": ["JavaScript", "HTML5/SCSS", "MySQL", "Node.js", "Git"]
+    "technologies": [
+      "TypeScript",
+      "PHP",
+      "Laravel",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "Docker",
+      "Nginx",
+      "Git / CI/CD"
+    ]
   }
 ]

@@ -23,9 +23,9 @@ watch(() => route.params.slug, () => {
     scrollToTop();
 });
 const stringMap = new Map<string, string>([
-    [`ecommerce-website`, `During my learning journey, I developed an e-commerce website project to simulate a modern online shopping experience. The website was built using ReactJS for the frontend and NestJS for the backend, with PostgreSQL as the database and Redis for caching to enhance performance.`],
-    [`minisocial-website`,`A social media website inspired by Facebook and Instagram with features like
-creating posts, nested comments, 24-hour stories, messaging, and notifications`],
+    [`datmonngon-platform`, `DatMonNgon is an all-in-one restaurant operating system and customer ordering ecosystem designed for modern F&B businesses. On the consumer side, customers can scan table QR codes or order online with categorized digital menus, promotional voucher redemption, and order tracking. On the operational side, store managers and service staff handle table layouts, take orders, and manage bills through an interactive real-time POS grid, while kitchen teams receive instant order tickets via a dedicated Kitchen Display System (KDS) powered by Socket.IO. The platform features robust analytics tracking revenue trends, average order values, and loyalty memberships, supported by PostgreSQL and Redis caching for high concurrency.`],
+    [`ecommerce-website`, `E-Shop is a full-featured e-commerce platform engineered to deliver a seamless shopping experience for tech and electronics consumers. Built with Next.js (App Router) and Tailwind CSS on the frontend, and supported by a robust RESTful API backend with database indexing and caching, the platform allows shoppers to explore catalog categories, search with instant suggestions, apply multi-attribute filters (pricing, ratings), manage persistent cart items with coupon vouchers, and complete streamlined multi-payment checkouts.`],
+    [`minisocial-website`,`MiniSocial is an engaging full-stack social platform developed to deliver real-time social connectivity and fluid user experiences. Built with Next.js on the frontend and a scalable Nest.js microservices architecture on the backend, the platform enables members to publish rich multimedia posts, engage in nested discussion threads, follow other users, and communicate via instantaneous two-way chat powered by Socket.IO. High-speed user discovery and content queries are accelerated through Elasticsearch indexing, with Redis managing distributed session states and active presence detection.`],
 [`baovethanhdat-website`,`A professional website for a security services company that provides comprehensive information about security solutions, personnel protection, corporate guarding, and client inquiry forms.`],
 ])
 
@@ -41,6 +41,7 @@ const projectDetails = computed(() => {
             title: project.value.title,
             descriptionTitle: project.value.descriptionTitle,
             descriptions: project.value.descriptions,
+            descriptions_detail: project.value.descriptions_detail,
             slug: project.value.slug,
             thumb: project.value.thumb,
             details: project.value.details,
@@ -125,7 +126,7 @@ const openThumbLightbox = () => {
                     <div class="detail-block">
                         <h3 class="block-title">1. Project Overview</h3>
                         <p class="block-text mt-2">
-                            {{ stringMap.get(projectDetails.slug) }}
+                            {{ projectDetails.descriptions_detail || stringMap.get(projectDetails.slug) }}
                         </p>
                     </div>
 

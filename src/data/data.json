@@ -1,60 +1,90 @@
 {
-  "ecommerce-website": {
-    "title": "Ecommerce Website",
-    "descriptionTitle": "Ecommerce Website",
-    "descriptions": "Built a feature-rich e-commerce website with product browsing, user authentication, shopping cart, order placement, and seamless checkout.",
-    "descriptions_detail": "",
-    "slug": "ecommerce-website",
-    "thumb": "https://res.cloudinary.com/dkrhxryix/image/upload/v1748280432/Ecommerce/x8cr6xoptdmqgxo7dxp4.png",
-    "imgs":[
-        "https://res.cloudinary.com/dkrhxryix/image/upload/v1748280432/Ecommerce/k08y7g8uf27ivileqyhk.png",
-        "https://res.cloudinary.com/dkrhxryix/image/upload/v1748280433/Ecommerce/aw5suxdeis3noqmjkeal.png",
-        "https://res.cloudinary.com/dkrhxryix/image/upload/v1748280432/Ecommerce/x8cr6xoptdmqgxo7dxp4.png",
-        "https://res.cloudinary.com/dkrhxryix/image/upload/v1748280432/Ecommerce/ca5svzdvwardlndrxyo8.png",
-        "https://res.cloudinary.com/dkrhxryix/image/upload/v1748280431/Ecommerce/qdue1rwpj141u6drahop.png",
-        "https://res.cloudinary.com/dkrhxryix/image/upload/v1748280431/Ecommerce/w922v27hn1jgodrhpbuc.png",
-        "https://res.cloudinary.com/dkrhxryix/image/upload/v1748280430/Ecommerce/bgotd0mxdpylrjwvcnwt.png",
-        "https://res.cloudinary.com/dkrhxryix/image/upload/v1748280429/Ecommerce/bwqgyf2cqhnh2djgztdy.png",
-        "https://res.cloudinary.com/dkrhxryix/image/upload/v1748280429/Ecommerce/luctao34emozi0hhrtl2.png",
-        "https://res.cloudinary.com/dkrhxryix/image/upload/v1748280429/Ecommerce/i1pfoshbccnsaxoqssbm.png",
-        "https://res.cloudinary.com/dkrhxryix/image/upload/v1748280429/Ecommerce/qx69pzodv1nj4nkbummb.png"
+  "datmonngon-platform": {
+    "title": "DatMonNgon F&B",
+    "descriptionTitle": "Full-Stack Restaurant Management, Real-Time POS & Food Ordering",
+    "descriptions": "An enterprise-grade, multi-tenant F&B management and smart food ordering platform powering restaurant operations end-to-end. Bridges customer dining (digital menu browsing, QR table ordering, online delivery) with internal restaurant operations (live POS table management, Kitchen Display System - KDS, and operational business analytics).",
+    "descriptions_detail": "DatMonNgon is an all-in-one restaurant operating system and customer ordering ecosystem designed for modern F&B businesses. On the consumer side, customers can scan table QR codes or order online with categorized digital menus, promotional voucher redemption, and order tracking. On the operational side, store managers and service staff handle table layouts, take orders, and manage bills through an interactive real-time POS grid, while kitchen teams receive instant order tickets via a dedicated Kitchen Display System (KDS) powered by Socket.IO. The platform features robust analytics tracking revenue trends, average order values, and loyalty memberships, supported by PostgreSQL and Redis caching for high concurrency.",
+    "slug": "datmonngon-platform",
+    "thumb": "/projects/datmonngon/thumb.webp",
+    "imgs": [
+      "/projects/datmonngon/thumb.webp",
+      "/projects/datmonngon/manager_dashboard.webp",
+      "/projects/datmonngon/waiter_pos.webp",
+      "/projects/datmonngon/customer_menu.webp",
+      "/projects/datmonngon/customer_mobile.webp",
+      "/projects/datmonngon/kitchen_kds.webp",
+      "/projects/datmonngon/manager_dishes.webp"
     ],
     "responsibilities": [
-      "Built RESTful APIs with Node.js and Express for product management, cart functionality, orders, and user accounts.",
-      "Implemented JWT for secure user authentication and authorization.",
-      "Utilized MongoDB to store user data, products, and order information with high schema flexibility."
+      "Architected and built the dual-portal frontend using React, providing an intuitive consumer food-ordering interface and an administrative management dashboard.",
+      "Integrated Socket.IO for real-time bidirectional communication, synchronizing live kitchen order tickets (KDS), table billing states, and instant staff notifications.",
+      "Designed and optimized normalized relational database schemas with PostgreSQL, implementing Redis caching to ensure rapid menu lookups and high-concurrency order placement.",
+      "Engineered the Waiter POS table-management matrix, supporting multi-area floor layouts, dine-in timers, itemized bill splitting, and instant checkout.",
+      "Developed comprehensive operational reporting dashboards with multi-axis visualizations for revenue tracking, order frequency, and customer loyalty tiers.",
+      "Containerized application services using Docker to achieve consistent development, testing, and production deployments."
     ],
     "details": {
-      "type": "Ecommerce",
-      "frameWork": "Next.js, Node.js, MongoDB, Redis, Elasticsearch",
-      "language": "JavaScript",
-      "liveUrl": "https://newshop-tyson.vercel.app"
+      "type": "Full-Stack F&B Management & Ordering SaaS",
+      "frameWork": "React, Node.js, PostgreSQL, Redis, Socket.IO, Docker",
+      "language": "JavaScript, TypeScript",
+      "liveUrl": "https://demo.datmonngon.com"
+    }
+  },
+  "ecommerce-website": {
+    "title": "E-Shop Commerce",
+    "descriptionTitle": "Modern Tech & Electronics E-Commerce Web App",
+    "descriptions": "A high-performance full-stack e-commerce web application featuring dynamic catalog navigation, multi-criteria filtering, cart management, voucher discounts, and secure checkout workflows.",
+    "descriptions_detail": "E-Shop is a full-featured e-commerce platform engineered to deliver a seamless shopping experience for tech and electronics consumers. Built with Next.js (App Router) and Tailwind CSS on the frontend, and supported by a robust RESTful API backend with database indexing and caching, the platform allows shoppers to explore catalog categories, search with instant suggestions, apply multi-attribute filters (pricing, ratings), manage persistent cart items with coupon vouchers, and complete streamlined multi-payment checkouts.",
+    "slug": "ecommerce-website",
+    "thumb": "/projects/ecommerce/thumb.webp",
+    "imgs": [
+      "/projects/ecommerce/thumb.webp",
+      "/projects/ecommerce/catalog.webp",
+      "/projects/ecommerce/detail.webp",
+      "/projects/ecommerce/cart.webp",
+      "/projects/ecommerce/checkout.webp",
+      "/projects/ecommerce/mobile.webp"
+    ],
+    "responsibilities": [
+      "Architected the client application using Next.js (App Router) and Tailwind CSS with a mobile-first responsive design and optimized web vitals.",
+      "Engineered an interactive product catalog with category classification, multi-criteria filtering (price range, ratings), keyword search, and dynamic sorting.",
+      "Built resilient cart management and client state persistence, supporting real-time quantity adjustments, promotional coupon redemption, and tax/shipping calculations.",
+      "Implemented a comprehensive checkout pipeline with customer info validation, payment method selection (Cash on Delivery, Credit Card), and order summary verification.",
+      "Integrated RESTful API endpoints and authentication services featuring quick 1-click demo login, JWT-based session security, and order tracking."
+    ],
+    "details": {
+      "type": "Full-Stack E-Commerce",
+      "frameWork": "Next.js, Tailwind CSS, Node.js, Express, MongoDB",
+      "language": "JavaScript, TypeScript",
+      "liveUrl": "https://newshop-tyson.vercel.app/"
     }
   },
   "minisocial-website": {
-    "title": "MiniSocial Website",
-    "descriptionTitle": "MiniSocial Website",
-    "descriptions": "A modern social media website inspired by Facebook and Instagram featuring post creation, nested comments, 24-hour stories, real-time messaging, and notifications.",
+    "title": "MiniSocial Network",
+    "descriptionTitle": "Modern Social Media & Real-Time Messaging Platform",
+    "descriptions": "A dynamic full-stack social networking platform inspired by modern digital communities. Features interactive personal feeds, media sharing, nested comments, 24-hour stories, user discovery, and real-time private messaging with online presence.",
+    "descriptions_detail": "MiniSocial is an engaging full-stack social platform developed to deliver real-time social connectivity and fluid user experiences. Built with Next.js on the frontend and a scalable Nest.js microservices architecture on the backend, the platform enables members to publish rich multimedia posts, engage in nested discussion threads, follow other users, and communicate via instantaneous two-way chat powered by Socket.IO. High-speed user discovery and content queries are accelerated through Elasticsearch indexing, with Redis managing distributed session states and active presence detection.",
     "slug": "minisocial-website",
-    "thumb": "https://res.cloudinary.com/dkrhxryix/image/upload/v1748280340/MiniSocial/ygsy5r8ulq171olgxbfl.png",
-    "imgs":[
-      "https://res.cloudinary.com/dkrhxryix/image/upload/v1748280344/MiniSocial/ogfpjkevxw7mdauxg4cq.png",
-      "https://res.cloudinary.com/dkrhxryix/image/upload/v1748280340/MiniSocial/cdqjjlflnqdaythwvhnk.png",
-      "https://res.cloudinary.com/dkrhxryix/image/upload/v1748280340/MiniSocial/iaep7l306zw3lhoxhu1d.png",
-      "https://res.cloudinary.com/dkrhxryix/image/upload/v1748280340/MiniSocial/cdfn0hvsgml3qmw4hski.png",
-      "https://res.cloudinary.com/dkrhxryix/image/upload/v1748280340/MiniSocial/ygsy5r8ulq171olgxbfl.png",
-      "https://res.cloudinary.com/dkrhxryix/image/upload/v1748280339/MiniSocial/vqquhpzg1n7ipglkdfot.png"
+    "thumb": "/projects/minisocial/thumb.webp",
+    "imgs": [
+      "/projects/minisocial/thumb.webp",
+      "/projects/minisocial/realtime_chat.webp",
+      "/projects/minisocial/news_feed.webp",
+      "/projects/minisocial/user_profile.webp",
+      "/projects/minisocial/post_detail.webp",
+      "/projects/minisocial/mobile_view.webp"
     ],
     "responsibilities": [
-      "Implemented rich features such as post creation with images, nested comment system, and auto-expiring 24h stories.",
-      "Integrated real-time chat and notifications using Socket.IO, including user online/offline status indicator.",
-      "Applied Elasticsearch to enable full-text search across users with keyword autocomplete suggestions.",
-      "Took full ownership of the development lifecycle as a solo fullstack developer, from design to deployment."
+      "Architected and implemented responsive frontend interfaces using Next.js (App Router), Tailwind CSS, and modern interactive UI patterns.",
+      "Engineered real-time bidirectional private chat and notification pipelines utilizing Socket.IO with live online/offline presence tracking.",
+      "Built interactive social features including multimedia post publishing, reaction interactions, and recursive nested comment threads.",
+      "Integrated Elasticsearch for high-performance fuzzy full-text user search and instantaneous keyword autocompletion.",
+      "Designed normalized relational database schemas with PostgreSQL and leveraged Redis for caching and session state persistence."
     ],
     "details": {
-      "type": "Social Media",
-      "frameWork": "Next.js, Nest.js, PostgreSQL, Docker, Redis, Elasticsearch",
-      "language": "TypeScript",
+      "type": "Full-Stack Social Network & Messaging SaaS",
+      "frameWork": "Next.js, Nest.js, PostgreSQL, Socket.IO, Redis, Docker, Elasticsearch",
+      "language": "TypeScript, JavaScript",
       "liveUrl": "https://mini-social-fe.vercel.app/home"
     }
   },
