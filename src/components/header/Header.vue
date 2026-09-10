@@ -83,7 +83,7 @@ const closeDrawer = () => {
                 <!-- Logo -->
                 <router-link class="logo-link d-flex align-center ga-2" to="/">
                     <v-avatar size="36" class="logo-avatar">
-                        <img style="object-fit: cover; width: 100%; height: 100%;" src="@/assets/icon.png" alt="Tyson Logo">
+                        <img style="object-fit: cover; width: 100%; height: 100%;" src="@/assets/avatar.png" alt="Tyson Logo">
                     </v-avatar>
                     <span class="logo-text font-mono">TYSON<span class="cursor-blink">_</span></span>
                 </router-link>

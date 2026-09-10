@@ -88,8 +88,36 @@
       "liveUrl": "https://mini-social-fe.vercel.app/home"
     }
   },
+  "thean-security-website": {
+    "title": "The An Security",
+    "descriptionTitle": "Corporate Security Solutions & Protective Services Platform",
+    "descriptions": "A professional corporate security services website built for The An Security Co., Ltd. Features comprehensive security solutions, industry credentials, client testimonials, and an automated consultation inquiry funnel.",
+    "descriptions_detail": "The An Security (baovethean.com) is a high-impact corporate website developed to showcase comprehensive physical security and asset protection services in Vietnam. Built with custom WordPress and Elementor architecture, the site delivers high search visibility through targeted on-page SEO. The platform features an intuitive security service catalog (building guarding, industrial warehouses, construction sites, VIP protection, event security), client credentials, interactive social hotlines (Zalo, phone), and an automated consultation inquiry funnel for swift security deployment.",
+    "slug": "thean-security-website",
+    "thumb": "/projects/thean-security/thumb.webp",
+    "imgs": [
+      "/projects/thean-security/thumb.webp",
+      "/projects/thean-security/services.webp",
+      "/projects/thean-security/service_detail.webp",
+      "/projects/thean-security/contact_quote.webp",
+      "/projects/thean-security/mobile_view.webp"
+    ],
+    "responsibilities": [
+      "Designed and developed a corporate-grade website architecture using WordPress, Elementor, and custom CSS3 animations.",
+      "Engineered a dynamic security service catalog highlighting specialized solutions for buildings, industrial warehouses, and VIP protection.",
+      "Implemented high-converting contact and consultation inquiry funnels with validation and automated email dispatch.",
+      "Executed comprehensive on-page SEO strategies, optimizing meta schema, image compression, and semantic heading hierarchy for top Google rankings in security services.",
+      "Ensured full mobile responsiveness, cross-browser compatibility, and fast Core Web Vitals loading speeds."
+    ],
+    "details": {
+      "type": "Corporate Security Services",
+      "frameWork": "WordPress, Elementor, PHP, CSS3, SEO Optimization",
+      "language": "PHP, CSS3, JavaScript",
+      "liveUrl": "https://baovethean.com"
+    }
+  },
   "baovethanhdat-website":{
-    "title": "Security Services Website",
+    "title": "Thanh Dat Security",
     "descriptionTitle": "Website for Security Services",
     "descriptions": "A security company website built and SEO-optimized via WordPress with features like service introduction, contact inquiry form, and company blog.",
     "slug": "baovethanhdat-website",
